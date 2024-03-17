@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/header.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+    </header>
+    <!-- hết phần header -->
+
+    <!-- phần main -->
+    <main>
+        <div class="container">
+            <div class="row d-flex">
+                <div class="tab col-md-2  mt-5">
+                    <button class="tablinks">Thống kê</button>
+                    <button class="tablinks">Quản lý sản phẩm</button>
+                    <button class="tablinks active">Quản lý danh mục</button>
+                    <button class="tablinks">Quản lý đơn hàng</button>
+                    <button class="tablinks">Quản lý khách hàng</button>
+                    <button class="tablinks">Quản lý bình luận</button>
+                    <button class="tablinks">Danh sách đơn hàng</button>
+                </div>
+                <div class="col-md-10  mt-5">
+                    <div id="dashboard" class="tabcontent">
+                        <h3>Quản lý danh mục</h3>
+                        <form action="" class="row align-items-center">
+                            <div class="col-md-3 mt-4 ">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Sắp xếp theo</option>
+                                    <option value="1">Tên</option>
+                                    <option value="2">Hãng</option>
+                                    <option value="3">Giá</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <a class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
+                            </div>
+                        </form>
+                        <div class="add__product">
+                            <div class="row">
+                                <div class="col-md-4 mt-4">
+                                    <div class="card text-center">
+                                        <div class="card-header fs-5">
+                                            Title
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">Xem chi tiết</a>
+                                            <a href="#" class="card-link">Sửa</a>
+                                            <a href="#" class="card-link delete-item" onclick="confirmDelete()">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <div class="card text-center">
+                                        <div class="card-header fs-5">
+                                            Title
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">Xem chi tiết</a>
+                                            <a href="#" class="card-link">Sửa</a>
+                                            <a href="#" class="card-link delete-item" onclick="confirmDelete()">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <div class="card text-center">
+                                        <div class="card-header fs-5">
+                                            Title
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">Xem chi tiết</a>
+                                            <a href="#" class="card-link">Sửa</a>
+                                            <a href="#" class="card-link delete-item" onclick="confirmDelete()">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- hết phần main -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+
+    function confirmDelete() {
+          // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
+          if (confirm("Bạn có chắc chắn muốn xóa?")) {
+              // Hành động xóa nếu người dùng xác nhận
+              console.log("Đã xóa");
+          } else {
+              // Hủy bỏ hành động xóa nếu người dùng không xác nhận
+              console.log("Đã hủy");
+          }
+      }
+  </script>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/admin.css">
+   <!-- jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="../js/header.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+  </header>
+  <!-- hết phần header -->
+
+  <!-- phần main -->
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="tab col-md-2 mt-5">
+          <button class="tablinks">Thống kê</button>
+          <button class="tablinks active">Quản lý sản phẩm</button>
+          <button class="tablinks">Quản lý danh mục</button>
+          <button class="tablinks">Quản lý đơn hàng</button>
+          <button class="tablinks">Quản lý khách hàng</button>
+          <button class="tablinks">Quản lý bình luận</button>
+          <button class="tablinks">Danh sách đơn hàng</button>
+        </div>
+        <div class="col-md-10">
+          <div id="dashboard" class="tabcontent mt-5">
+            <h3>Quản lý sản phẩm</h3>
+            <form action="" class=" row align-items-center">
+              <div class="col-md-3 mt-4">
+                  <input type="text" class="form-control" placeholder="Tìm kiếm">
+              </div>
+              <div class="col-md-4 mt-4">
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>Sắp xếp theo</option>
+                      <option value="1">Tên</option>
+                      <option value="2">Hãng</option>
+                      <option value="3">Giá</option>
+                  </select>
+              </div>
+              <div class="col-md-3 mt-4">
+                  <a class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
+              </div>
+          </form>
+            <div class="add__product mt-4">
+              <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" id="checkAll"></th>
+                    <th scope="col">STT</th>
+                    <th scope="col">Danh mục</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tác vụ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col"><input type="checkbox" class="checkbox-item"></th>
+                    <th scope="row">1</th>
+                    <td>Apple</td>
+                    <td>iphone 13 promax</td>
+                    <td>20</td>
+                    <td>100000</td>
+                    <td><img src="../img/4.webp" alt=""></td>
+                    <td><a href="" class="mx-2">Chi tiết</a> <a href="" class="mx-2">Sửa</a> <a href="#" onclick="confirmDelete()">Xóa</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><input type="checkbox" class="checkbox-item"></th>
+                    <th scope="row">2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="mx-2">Chi tiết</a> <a href="" class="mx-2">Sửa</a> <a href="#" onclick="confirmDelete()">Xóa</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><input type="checkbox" class="checkbox-item"></th>
+                    <th scope="row">3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="mx-2">Chi tiết</a> <a href="" class="mx-2">Sửa</a> <a href="#" onclick="confirmDelete()">Xóa</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><input type="checkbox" class="checkbox-item"></th>
+                    <th scope="row">4</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="mx-2">Chi tiết</a> <a href="" class="mx-2">Sửa</a> <a href="#" onclick="confirmDelete()">Xóa</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><input type="checkbox" class="checkbox-item"></th>
+                    <th scope="row">5</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="mx-2">Chi tiết</a> <a href="" class="mx-2">Sửa</a> <a href="#" onclick="confirmDelete()">Xóa</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" onclick="confirmDelete()" class="btn btn-primary">Xóa tất cả</a>
+              <nav aria-label="Page navigation example mt-4">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- hết phần main -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  var isCheckedAll = false;
+
+  document.getElementById('checkAll').addEventListener('change', function () {
+    isCheckedAll = !isCheckedAll;
+    var checkboxes = document.getElementsByClassName('checkbox-item');
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = isCheckedAll;
+    }
+  });
+
+  function confirmDelete() {
+        // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
+        if (confirm("Bạn có chắc chắn muốn xóa?")) {
+            // Hành động xóa nếu người dùng xác nhận
+            console.log("Đã xóa");
+        } else {
+            // Hủy bỏ hành động xóa nếu người dùng không xác nhận
+            console.log("Đã hủy");
+        }
+    }
+</script>
+
+</html>
