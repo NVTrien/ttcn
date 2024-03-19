@@ -42,6 +42,12 @@
                             <div class="col-md-3 mt-4 ">
                                 <input type="text" class="form-control" placeholder="Tìm kiếm">
                             </div>
+                            <div class="col-md-4 mt-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">Đang hoạt động</option>
+                                    <option value="2">Đã vô hiệu hóa</option>
+                                </select>
+                            </div>
                         </form>
                         <div class="add__product">
                             <div class="row">
@@ -53,7 +59,7 @@
                                         <div class="card-body">
                                             <a href="#" class="card-link">Xem chi tiết</a>
 
-                                            <a href="#" class="card-link " onclick="confirmDelete()">Vô hiệu hóa</a>
+                                            <a href="#" class="card-link" onclick="confirmAction('vô hiệu hóa')">Vô hiệu hóa</a>
                                         </div>
                                     </div>
                                 </div>
@@ -63,18 +69,9 @@
                                             Username
                                         </div>
                                         <div class="card-body">
-                                            a
-                                            <a href="#" class="card-link delete-item" onclick="confirmDelete()">Vô hiệu hóa</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mt-4">
-                                    <div class="card text-center">
-                                        <div class="card-header fs-5">
-                                            Username
-                                        </div>
-                                        <div class="card-body">
-                                            <a href="#" class="card-link delete-item" onclick="confirmDelete()">Vô hiệu hóa</a>
+                                            <a href="#" class="card-link">Xem chi tiết</a>
+
+                                            <a href="#" class="card-link" onclick="confirmAction('kích hoạt')">Kích hoạt</a>
                                         </div>
                                     </div>
                                 </div>
@@ -90,17 +87,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script>
-
-    function confirmDelete() {
-          // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
-          if (confirm("Bạn có chắc muốn vô hiệu hóa tài khoản này?")) {
-              console.log("Đã vô hiệu");
-          } else {
-              // Hủy bỏ hành động xóa nếu người dùng không xác nhận
-              console.log("Đã hủy");
-          }
-      }
-  </script>
+    <script>
+        function confirmAction(action) {
+            // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết kích hoạt hoặc vô hiệu hóa
+            if (confirm("Bạn có chắc muốn " + action + " tài khoản này?")) {
+                console.log("Đã " + action);
+            } else {
+                // Hủy bỏ hành động kích hoạt hoặc vô hiệu hóa nếu người dùng không xác nhận
+                console.log("Đã hủy " + action);
+            }
+        }
+    </script>
 
 </html>
