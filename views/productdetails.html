@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- css -->
   <link rel="stylesheet" href="../css/admin.css">
-   <!-- jQuery -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="../js/header.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../js/header.js"></script>
   <title>Chi tiết sản phẩm</title>
 </head>
 
@@ -27,13 +27,13 @@
     <div class="container">
       <div class="row">
         <div class="tab col-md-2 mt-5">
-          <button class="tablinks">Thống kê</button>
-          <button class="tablinks active">Quản lý sản phẩm</button>
-          <button class="tablinks">Quản lý danh mục</button>
-          <button class="tablinks">Quản lý đơn hàng</button>
-          <button class="tablinks">Quản lý khách hàng</button>
-          <button class="tablinks">Quản lý bình luận</button>
-          <button class="tablinks">Danh sách đơn hàng</button>
+          <a href="" class="tablinks">Thống kê</a>
+          <a href="manageproduct.html" class="tablinks active">Quản lý sản phẩm</a>
+          <a href="categorymanagement.html" class="tablinks">Quản lý danh mục</a>
+          <a href="" class="tablinks">Quản lý đơn hàng</a>
+          <a href="customermanagement.html" class="tablinks">Quản lý khách hàng</a>
+          <a href="" class="tablinks">Quản lý bình luận</a>
+          <a href="" class="tablinks">Danh sách đơn hàng</a>
         </div>
         <div class="col-md-10">
           <div id="dashboard" class="tabcontent mt-5">
@@ -110,15 +110,15 @@
 <script>
 
   function confirmDelete() {
-        // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
-        if (confirm("Bạn có chắc chắn muốn xóa?")) {
-            // Hành động xóa nếu người dùng xác nhận
-            console.log("Đã xóa");
-        } else {
-            // Hủy bỏ hành động xóa nếu người dùng không xác nhận
-            console.log("Đã hủy");
-        }
+    // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
+    if (confirm("Bạn có chắc chắn muốn xóa?")) {
+      // Hành động xóa nếu người dùng xác nhận
+      console.log("Đã xóa");
+    } else {
+      // Hủy bỏ hành động xóa nếu người dùng không xác nhận
+      console.log("Đã hủy");
     }
+  }
 </script>
 
 </html>

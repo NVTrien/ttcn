@@ -27,32 +27,28 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="tab col-md-2  mt-5">
-                    <button class="tablinks">Thống kê</button>
-                    <button class="tablinks">Quản lý sản phẩm</button>
-                    <button class="tablinks active">Quản lý danh mục</button>
-                    <button class="tablinks">Quản lý đơn hàng</button>
-                    <button class="tablinks">Quản lý khách hàng</button>
-                    <button class="tablinks">Quản lý bình luận</button>
-                    <button class="tablinks">Danh sách đơn hàng</button>
+                    <a href="" class="tablinks">Thống kê</a>
+                    <a href="manageproduct.html" class="tablinks">Quản lý sản phẩm</a>
+                    <a href="categorymanagement.html" class="tablinks active">Quản lý danh mục</a>
+                    <a href="" class="tablinks">Quản lý đơn hàng</a>
+                    <a href="customermanagement.html" class="tablinks">Quản lý khách hàng</a>
+                    <a href="" class="tablinks">Quản lý bình luận</a>
+                    <a href="" class="tablinks">Danh sách đơn hàng</a>
                 </div>
                 <div class="col-md-10  mt-5">
                     <div id="dashboard" class="tabcontent">
                         <h3>Danh sách sản phẩm</h3>
-                        <form action="" class="row align-items-center">
-                            <div class="col-md-3 mt-4 ">
-                                <input type="text" class="form-control" placeholder="Tìm kiếm">
-                            </div>
+                        <div class="row">
+                            <form action="" class="col-md-4 mt-4">
+                                <div class="input-group-search">
+                                    <input type="text" class="input-search">
+                                    <input class="button--submit" value="Tìm kiếm" type="submit">
+                                </div>
+                            </form>
                             <div class="col-md-4 mt-4">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Sắp xếp theo</option>
-                                    <option value="1">Tên</option>
-                                    <option value="3">Giá</option>
-                                </select>
+                                <a href="" class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
                             </div>
-                            <div class="col-md-4 mt-4">
-                                <a class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
-                            </div>
-                        </form>
+                        </div>
                         <div class="add__product">
                             <div class="row">
                                 <div class="col-md-3 mt-4">
