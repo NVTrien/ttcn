@@ -166,6 +166,14 @@ table img {
   object-fit: cover;
 }
 
+.card__product {
+  min-height: 400px;
+}
+
+.card {
+  height: 100%;
+}
+
 /* CSS form search */
 .input-group-search {
   display: flex;

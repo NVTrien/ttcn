@@ -38,20 +38,41 @@
                 <div class="col-md-10  mt-5">
                     <div id="dashboard" class="tabcontent">
                         <h3>Danh sách sản phẩm</h3>
-                        <div class="row">
-                            <form action="" class="col-md-4 mt-4">
-                                <div class="input-group-search">
-                                    <input type="text" class="input-search">
-                                    <input class="button--submit" value="Tìm kiếm" type="submit">
-                                </div>
-                            </form>
-                            <div class="col-md-4 mt-4">
-                                <a href="" class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
-                            </div>
+                        <!-- phần cần thay -->
+                        <div class="mt-4">
+                            <a href="" class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Thêm mới</a>
                         </div>
+                        <form action="" class=" mt-4">
+                            <div class="input-group-search">
+                                <input type="text" class="input-search">
+                                <input class="button--submit" value="Tìm kiếm" type="submit">
+                            </div>
+                        </form>
+                        <!-- sửa lại phần này -->
                         <div class="add__product">
                             <div class="row">
-                                <div class="col-md-3 mt-4">
+                                    <!-- thêm class card__product ở đây -->
+                                <div class="col-md-3 mt-4 card__product"> 
+                                    <!-- thêm class card__product ở đây -->
+                                    <div class="card">
+                                        <img src="../img/4.webp" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Samsung Galaxy S23 6G 128G</h5>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Dung lượng</li>
+                                            <li class="list-group-item">Kích thước</li>
+                                            <li class="list-group-item">Giá</li>
+                                        </ul>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">Xem chi tiết</a>
+                                            <a href="#" class="card-link">Sửa</a>
+                                            <a href="#" class="card-link" onclick="confirmDelete()">Xóa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- thêm class card__product ở đây -->
+                                <div class="col-md-3 mt-4 card__product">
                                     <div class="card">
                                         <img src="../img/4.webp" class="card-img-top" alt="...">
                                         <div class="card-body">
@@ -69,25 +90,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 mt-4">
-                                    <div class="card">
-                                        <img src="../img/4.webp" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Samsung Galaxy S23</h5>
-                                        </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Dung lượng</li>
-                                            <li class="list-group-item">Kích thước</li>
-                                            <li class="list-group-item">Giá</li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <a href="#" class="card-link">Xem chi tiết</a>
-                                            <a href="#" class="card-link">Sửa</a>
-                                            <a href="#" class="card-link" onclick="confirmDelete()">Xóa</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 mt-4">
+                                <!-- thêm class card__product ở đây -->
+                                <div class="col-md-3 mt-4 card__product">
                                     <div class="card">
                                         <img src="../img/1.webp" class="card-img-top" alt="...">
                                         <div class="card-body">
@@ -105,7 +109,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 mt-4">
+                                <!-- thêm class card__product ở đây -->
+                                <div class="col-md-3 mt-4 card__product">
                                     <div class="card">
                                         <img src="../img/1.webp" class="card-img-top" alt="...">
                                         <div class="card-body">
