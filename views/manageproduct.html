@@ -150,11 +150,11 @@
   function confirmDelete() {
         // Hiển thị hộp thoại xác nhận khi nhấp vào liên kết xóa
         if (confirm("Bạn có chắc chắn muốn xóa?")) {
-            // Hành động xóa nếu người dùng xác nhận
+            return true
             console.log("Đã xóa");
         } else {
             // Hủy bỏ hành động xóa nếu người dùng không xác nhận
-            console.log("Đã hủy");
+            return false
         }
     }
 </script>
