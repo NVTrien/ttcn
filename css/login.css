@@ -16,7 +16,7 @@
     font-family: "Poppins",sans-serif;
     margin: 10px 0 30px 0;
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 600;
   }
   
   .form {
@@ -58,10 +58,10 @@
   
     padding: 10px 15px;
     font-family: "Poppins",sans-serif;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 0 !important;
     outline: 0 !important;
-    background: teal;
+    background: #d0021c;
     color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

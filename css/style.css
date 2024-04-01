@@ -73,7 +73,7 @@ header ul .nav-item a {
     border-radius: 10px;
 }
 
-header ul .nav-item a:hover {
+header ul .nav-item>a:hover {
     background-color: rgba(255, 64, 64);
     transition: all 0.3s ease-in-out;
 }
@@ -115,11 +115,6 @@ svg {
     flex-grow: 0!important;
 }
 
-@media (max-width: 990px) {
-    .navbar ul {
-        align-items: initial !important;
-    }
-}
 
 /* nav-second */
 .nav-bot {
@@ -141,6 +136,16 @@ svg {
  
 
 /* hết nav-second */
+
+/* phần banner */
+
+.banner {
+    padding: 0!important;
+}
+
+.banner img {
+    width: 100%;
+}
 
 /* Phần apple */
 
@@ -250,4 +255,28 @@ footer {
 .color-red {
     color: #d0021c;
 }
-   
+
+.text-dark {
+    color: #212529!important;
+}
+
+/* phần table chính sách bảo hành */
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+/* nút btn-primary */
+.btn-primary {
+    color: #fff;
+    background-color:#d0021c;
+    border-color: #d0021c;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #d0021c;
+    border-color: #d0021c;
+}
