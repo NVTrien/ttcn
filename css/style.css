@@ -157,14 +157,14 @@ svg {
 
 /* Phần apple */
 
-#apple .apple__all {
+ .apple__all {
     font-weight: 500;
     color: #555;
     font-size: 16px;
     text-transform: uppercase;
 }
 
-#apple .apple__all:hover {
+.apple__all:hover {
     color: black;
 }
 
