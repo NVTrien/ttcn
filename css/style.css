@@ -133,6 +133,14 @@ svg {
     color: rgb(26, 26, 26, 0.8);
     font-weight: 550;
 }
+
+.nav-bot ul {
+    padding: 0;
+}
+
+/* .nav-bot ul:first-child {
+    margin-right: 12px;
+} */
  
 
 /* hết nav-second */
