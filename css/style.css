@@ -165,7 +165,7 @@ svg {
 }
 
 .apple__all:hover {
-    color: black;
+    color: #d0021c;
 }
 
 .cnt_title {
@@ -266,6 +266,10 @@ footer {
 
 .text-dark {
     color: #212529!important;
+}
+
+.footer ul a:hover {
+    color: #d0021c;
 }
 
 /* phần table chính sách bảo hành */
