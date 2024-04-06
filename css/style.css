@@ -7,7 +7,7 @@ body {
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box!important;
 }
 
 li {
@@ -24,6 +24,25 @@ a {
     color:#212529;
 }
 
+/* giỏ hàng */
+
+.cart {
+    position: relative;
+}
+
+#items_in_cart {
+    align-items: center;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    height: 20px;
+    justify-content: center;
+    left: 10%;
+    position: absolute;
+    width: 20px;
+}
 /* form search */
 .group {
     display: flex;
@@ -292,3 +311,4 @@ table {
     color: #d0021c;
     border-color: #d0021c;
 }
+
