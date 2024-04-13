@@ -225,9 +225,11 @@
                 class="d-flex justify-content-between align-items-start cart__container p-3 rounded boder bg-white fixed-bottom">
                 <div>
                     <p>Tạm tính</p>
-                    <span class="price"><strong class="total-price">0 <span>đ</span></strong></span>
+                    <span class="price"><strong class="total-price">0 </strong><strong class="color-red">
+                            đ</strong></span>
                 </div>
                 <div>
+                    <input type="hidden" name="total-price">
                     <button class="btn btn-primary">Mua ngay</button>
                 </div>
             </div>
@@ -273,7 +275,8 @@
             var price = cart.querySelector('.price-product').textContent;
             total += parseInt(price);
         }
-        document.querySelector('.total-price').textContent = total + ' đ';
+        document.querySelector('.total-price').textContent = total;
+        document.querySelector('input[type="hidden"]').value = total;
     }
 
 </script>
