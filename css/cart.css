@@ -1,0 +1,21 @@
+.cart__container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cart__title {
+    text-align: center;
+}
+
+.cart__item img {
+    width: 150px;
+    height: auto;
+}
+
+.remove__item {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
