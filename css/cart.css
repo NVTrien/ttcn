@@ -19,3 +19,12 @@
     padding: 0;
     z-index: 10;
 }
+
+.btn-buy:disabled,
+.btn-delete-item:disabled {
+    cursor:not-allowed;
+}
+
+p {
+    margin: 0;
+}
