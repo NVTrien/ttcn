@@ -27,51 +27,21 @@
   margin: auto auto;
 }
 
-/* css phần tăng giảm số lượng mua
+/* /* css phần tăng giảm số lượng mua */
 
-.number-control {
-  display: flex;
-  align-items: center;
-}
+
 
 .number-left::before,
 .number-right::after {
-  content: attr(data-content);
   background-color: #e11b1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid e11b1e;
-  width: 20px;
-  color: white;
-  transition: background-color 0.3s;
-  cursor: pointer;
-  padding: 2px;
-  height: 30px;
-}
-
-.number-left::before {
-  content: "-";
-  border-radius: 5px 0 0 5px;
-}
-
-.number-right::after {
-  content: "+";
-  border-radius: 0 5px 5px 0;
 }
 
 .number-quantity {
-  border: 0;
-  width: 50px;
-  height: 30px;
+
   border-top: 1px solid #e11b1e;
   border-bottom: 1px solid #e11b1e;
-  padding: 0 5px;
-  -moz-appearance: textfield;
-  /* Firefox */
-  /* appearance: textfield;
-  /* Chrome, Safari, Opera */
-/* } */
+
+}
 
 .number-left:hover::before,
 .number-right:hover::after {
