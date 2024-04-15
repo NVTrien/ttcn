@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/category.css">
     <link rel="stylesheet" href="../../css/cart.css">
+    <link rel="stylesheet" href="../../css/numberquantity.css">
     <link rel="stylesheet" href="../../css/reponsive.css">
     <title>Danh sách sản phẩm</title>
 </head>
@@ -191,9 +192,14 @@
                     <div>
                         <h6>iPhone 15 Pro Max 512GB</h6>
                     </div>
-                    <span class="color-red"><strong class="price-product">29390000</strong> <strong>đ</strong></span>
+                    <span class="color-red"><strong class="price-product"
+                            data-original-price="29390000">29390000</strong> <strong>đ</strong></span>
                     <div class="mt-1">
-                        <span>Số lượng : <span class="color-red">9</span></span>
+                        <div class="number-control mt-3">
+                            <div class="number-left" onclick="decrement(event)"></div>
+                            <input type="number" name="number" value="1" class="number-quantity" readonly="readonly">
+                            <div class="number-right" onclick="increment(event)"></div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -211,9 +217,14 @@
                     <div>
                         <h6>iPhone 15 Pro Max 512GB</h6>
                     </div>
-                    <span class="color-red"><strong class="price-product">29390000</strong> <strong>đ</strong></span>
+                    <span class="color-red"><strong class="price-product"
+                            data-original-price="29390000">29390000</strong> <strong>đ</strong></span>
                     <div class="mt-1">
-                        <span>Số lượng : <span class="color-red">9</span></span>
+                        <div class="number-control mt-3">
+                            <div class="number-left" onclick="decrement(event)"></div>
+                            <input type="number" name="number" value="1" class="number-quantity" readonly="readonly">
+                            <div class="number-right" onclick="increment(event)"></div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -249,6 +260,38 @@
 <script src="../../js/index.js"></script>
 <script>
 
+function increment(event) {
+        var quantityInput = event.target.parentNode.querySelector('.number-quantity');
+        var currentValue = parseInt(quantityInput.value);
+
+        if (currentValue >= 5) {
+            alert('Số lượng tối đa là 5');
+            return;
+        }
+
+        quantityInput.value = currentValue + 1;
+
+        var priceProduct = event.target.parentNode.parentNode.previousElementSibling.querySelector('.price-product');
+        var originalPrice = parseInt(priceProduct.dataset.originalPrice);
+        priceProduct.textContent = originalPrice * (currentValue + 1);
+
+        updateTotalPrice();
+    }
+
+    function decrement(event) {
+        var quantityInput = event.target.parentNode.querySelector('.number-quantity');
+        var currentValue = parseInt(quantityInput.value);
+
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+
+            var priceProduct = event.target.parentNode.parentNode.previousElementSibling.querySelector('.price-product');
+            var originalPrice = parseInt(priceProduct.dataset.originalPrice);
+            priceProduct.textContent = originalPrice * (currentValue - 1);
+
+            updateTotalPrice();
+        }
+    }
     var checkAll = document.getElementById('checkAll');
     checkAll.addEventListener('change', function () {
         var checkboxes = document.getElementsByClassName('checkbox-item');
@@ -283,7 +326,7 @@
     function updateButtons() {
         var checkedItems = document.querySelectorAll('.checkbox-item:checked');
         var buyButton = document.querySelector('.btn.btn-buy');
-        var removeButton = document.querySelector('.btn.btn-delete-item'); 
+        var removeButton = document.querySelector('.btn.btn-delete-item');
         if (checkedItems.length > 0) {
             buyButton.disabled = false;
             removeButton.disabled = false;

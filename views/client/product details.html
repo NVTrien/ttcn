@@ -11,6 +11,7 @@
   <!-- css -->
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/productdetail.css">
+  <link rel="stylesheet" href="../../css/numberquantity.css">
   <link rel="stylesheet" href="../../css/reponsive.css">
   <title>Chi tiết sản phẩm</title>
 </head>
@@ -225,7 +226,7 @@
             <form action="">
               <div class="number-control mt-3">
                 <div class="number-left" onclick="decrement()"></div>
-                <input type="number" name="number" id="quantity" value="1" class="number-quantity">
+                <input type="number" name="number" id="quantity" value="1" class="number-quantity" readonly="readonly">
                 <div class="number-right" onclick="increment()"></div>
               </div>
               <div class="mt-3"><span class="fw-bold">Số lượng còn lại : <strong class="price" id="remaining">9</strong>
@@ -394,13 +395,12 @@
 <script>
   function increment() {
     var quantityInput = document.getElementById('quantity');
-    var remainingSpan = document.getElementById('remaining');
     var currentValue = parseInt(quantityInput.value);
-    var remainingValue = parseInt(remainingSpan.innerText);
-
-    if (currentValue < remainingValue) {
-      quantityInput.value = currentValue + 1;
-    }
+    if (currentValue >= 5) {
+            alert('Số lượng tối đa là 5');
+            return;
+        }
+    quantityInput.value = currentValue + 1;
   }
 
   function decrement() {
@@ -411,19 +411,6 @@
       quantityInput.value = currentValue - 1;
     }
   }
-
-  document.getElementById('quantity').addEventListener('input', function () {
-    var quantityInput = document.getElementById('quantity');
-    var remainingSpan = document.getElementById('remaining');
-    var currentValue = parseInt(quantityInput.value);
-    var remainingValue = parseInt(remainingSpan.innerText);
-
-    if (currentValue < 1) {
-      quantityInput.value = 1;
-    } else if (currentValue > remainingValue) {
-      quantityInput.value = remainingValue;
-    }
-  });
 </script>
 
 </html>
