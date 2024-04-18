@@ -223,21 +223,20 @@
               <p class="me-3 border p-2 rounded">Xám</p>
             </div>
             <span class="fw-bold">Giá: <strong class="price"> 30.990.000₫</strong></span>
-            <form action="">
-              <div class="number-control mt-3">
-                <div class="number-left" onclick="decrement()"></div>
-                <input type="number" name="number" id="quantity" value="1" class="number-quantity" readonly="readonly">
-                <div class="number-right" onclick="increment()"></div>
-              </div>
-              <div class="mt-3"><span class="fw-bold">Số lượng còn lại : <strong class="price" id="remaining">9</strong>
-                  sản phẩm</span></div>
-              <div class="mt-3">
-                <button class="me-2 buy d-flex align-items-center justify-content-center">MUA NGAY <br> <span
-                    class="p-1">(Giao
-                    nhanh 2h hoặc nhận tại cửa hàng)</span></button>
-                <!-- <a href="" class="add-product d-flex align-items-center"><i
-                    class="fa-solid fa-cart-plus fs-3 price"></i></a> -->
-            </form>
+            <div class="mt-3"><span class="fw-bold">Số lượng còn lại : <strong class="price" id="remaining">9</strong>
+                sản phẩm</span></div>
+            <div class="mt-3 d-flex">
+              <form action="" class="me-2">
+                <button class=" p-2 buy d-flex align-items-center justify-content-center d-block w-100">MUA NGAY <span
+                    class="">(Giao tận nhà hoặc nhận tại cửa hàng)</span></button>
+                    <input type="hidden">
+              </form>
+              <form action="">
+                <button type="submit" class="add-product d-flex align-items-center"><i
+                    class="fa-solid fa-cart-plus fs-3 price"></i></button>
+                    <input type="hidden">
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -339,6 +338,10 @@
   </div>
   <!-- hết back-top -->
 
+  <div id="custom-alert" class="fw-bold" >
+    Đã thêm vào giỏ hàng <i class="fa-solid fa-circle-check"></i>
+</div>
+
   <!-- footer -->
   <footer class="footer bg-white mt-4">
     <div class="container">
@@ -393,24 +396,16 @@
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="../../js/index.js"></script>
 <script>
-  function increment() {
-    var quantityInput = document.getElementById('quantity');
-    var currentValue = parseInt(quantityInput.value);
-    if (currentValue >= 5) {
-            alert('Số lượng tối đa là 5');
-            return;
-        }
-    quantityInput.value = currentValue + 1;
-  }
+  document.querySelector('.add-product').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
 
-  function decrement() {
-    var quantityInput = document.getElementById('quantity');
-    var currentValue = parseInt(quantityInput.value);
+      var customAlert = document.getElementById('custom-alert');
+      customAlert.style.display = 'block';
 
-    if (currentValue > 1) {
-      quantityInput.value = currentValue - 1;
-    }
-  }
+      setTimeout(function() {
+          customAlert.style.display = 'none';
+      }, 1000); // Hide the alert after 1 second
+  });
 </script>
 
 </html>

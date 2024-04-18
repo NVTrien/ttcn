@@ -47,8 +47,9 @@
 .number-right:hover::after {
   background-color: #e11b1e;
   opacity: 0.8;
-} */
+}
 
+*/
 /* phần store */
 
 .store a {
@@ -58,4 +59,21 @@
 
 .comment__content {
   margin-left: 40px;
+}
+
+/* Phần alert */
+
+#custom-alert {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 40%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  padding: 15px;
+  color: #107948;
 }
