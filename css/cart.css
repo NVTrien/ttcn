@@ -22,7 +22,7 @@
 
 .btn-buy:disabled,
 .btn-delete-item:disabled {
-    cursor:not-allowed;
+    cursor:not-allowed ;
 }
 
 p {
