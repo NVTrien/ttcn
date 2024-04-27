@@ -38,6 +38,113 @@
                     <a class="tablinks">Danh sách đơn hàng</a>
                 </div>
                 <div class="col-md-10">
+                    <div class="tabcontent">
+                        <div class="row dashboard_tk">
+                            <div class="add__product mt-4">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#unconfirmed" type="button" role="tab"
+                                            aria-controls="home-tab-pane" aria-selected="true">Đơn hàng chưa xác
+                                            nhận</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#confirmed" type="button" role="tab"
+                                            aria-controls="profile-tab-pane" aria-selected="false">Đơn hàng đã xác
+                                            nhận</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div id="unconfirmed" class="tab-pane fade show active" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <table class="table text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Mã ĐH</th>
+                                                    <th scope="col">Ngày Đặt</th>
+                                                    <th scope="col">Khách Hàng</th>
+                                                    <th scope="col">Sản Phẩm</th>
+                                                    <th scope="col">Tổng Tiền</th>
+                                                    <th scope="col">Trạng Thái</th>
+                                                    <th scope="col">Tác vụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <form action="">
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>10/3/2024</td>
+                                                        <td>Cường</td>
+                                                        <td width="20%">iphone 13 promax - 1
+                                                            samsung galaxy s21 - 1
+                                                            samsung galaxy s21 - 1
+                                                            oppo reno 6 128G -1
+                                                        </td>
+                                                        <td>100000</td>
+                                                        <td>Chưa xác nhận</td>
+                                                        <td><a href="" class="me-2">Sửa</a> <a href="">Hủy đơn</a></td>
+                                                    </tr>
+                                                </form>
+                                            </tbody>
+                                        </table>
+                                        <nav aria-label="Page navigation example mt-4">
+                                            <ul class="pagination justify-content-end">
+                                                <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div id="confirmed" class="tab-pane fade" aria-labelledby="home-tab" tabindex="0">
+                                        <table class="table text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Mã ĐH</th>
+                                                    <th scope="col">Ngày Đặt</th>
+                                                    <th scope="col">Khách Hàng</th>
+                                                    <th scope="col">Sản Phẩm</th>
+                                                    <th scope="col">Tổng Tiền</th>
+                                                    <th scope="col">Trạng Thái</th>
+                                                    <th scope="col">Tác vụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <form action="">
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>10/3/2024</td>
+                                                        <td>Cường</td>
+                                                        <td width="20%">iphone 13 promax - 1
+                                                            samsung galaxy s21 - 1
+                                                            samsung galaxy s21 - 1
+                                                            oppo reno 6 128G -1
+                                                        </td>
+                                                        <td>100000</td>
+                                                        <td>Đã Xác nhận</td>
+                                                        <td><a href="" class="me-2">Sửa</a> <a href="">Hủy đơn</a> </td>
+                                                    </tr>
+                                                </form>
+                                            </tbody>
+                                        </table>
+                                        <nav aria-label="Page navigation example mt-4">
+                                            <ul class="pagination justify-content-end">
+                                                <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-10">
                     <div id="dashboard" class="tabcontent">
                         <div class="row dashboard_tk">
                             <div class="add__product mt-4">
@@ -117,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>

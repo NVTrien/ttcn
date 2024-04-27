@@ -219,3 +219,7 @@ table img {
 
 }
 
+.nav-tabs .active {
+  color: #052c65!important;
+}
+
