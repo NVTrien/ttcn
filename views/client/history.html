@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../css/numberquantity.css">
     <link rel="stylesheet" href="../../css/reponsive.css">
     <link rel="stylesheet" href="../../css/order.css">
-    <title>Danh sách sản phẩm</title>
+    <title>Lịch sử mua hàng</title>
 </head>
 
 <body>
@@ -172,17 +172,16 @@
 
     <!-- phần main -->
     <main class="order__container mt-4">
-        <h5 class="fw-bold text-center">Chi tiết đơn hàng</h5>
+        <h5 class="fw-bold text-center">Lịch Sử mua hàng</h5>
         <hr>
-        <form action="">
+        <div>
             <div class="order__content">
                 <div class="order__detail">
                     <div class="d-flex align-items-center justify-content-between">
                         <div>
                             <span class="fs-6">Mã Đơn Hàng: <span>ĐH01</span></span>
-                            <span class="fs-6 d-block">Trạng thái đơn hàng: <span id="orderStatus">Đã xác nhận</span></span>
+                            <span class="fs-6 d-block">Trạng thái đơn hàng: <span>Đã thanh toán</span></span>
                         </div>
-                        <button class="btn btn-primary" id="cancelOrderButton"> Hủy Đơn</button>
                     </div>
                 </div>
             </div>
@@ -210,16 +209,15 @@
                 <p class="fs-6">Học Viện Nông Nghiệp Việt Nam </p>
             </div>
             <hr>
-        </form>
-        <form action="">
+        </div>
+        <div>
             <div class="order__content">
                 <div class="order__detail">
                     <div class="d-flex align-items-center justify-content-between">
                         <div>
                             <span class="fs-6">Mã Đơn Hàng: <span>ĐH01</span></span>
-                            <span class="fs-6 d-block">Trạng thái đơn hàng: <span id="orderStatus">Đã xác nhận</span></span>
+                            <span class="fs-6 d-block">Trạng thái đơn hàng: <span>Đã thanh toán</span></span>
                         </div>
-                        <button class="btn btn-primary" id="cancelOrderButton"> Hủy Đơn</button>
                     </div>
                 </div>
             </div>
@@ -247,7 +245,7 @@
                 <p class="fs-6">Học Viện Nông Nghiệp Việt Nam </p>
             </div>
             <hr>
-        </form>
+        </div>
     </main>
     <!-- hết phần main -->
 
@@ -261,26 +259,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script src="../../js/index.js"></script>
-
-<script>
-    document.getElementById('cancelOrderButton').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        var orderStatus = document.getElementById('orderStatus').textContent;
-
-        if (orderStatus !== 'Chưa Xác Nhận') {
-            alert('Vui lòng liên hệ số điện thoại 093.099.099 để yêu cầu hủy đơn hàng.');
-            return;
-        }
-
-        var confirmCancel = confirm('Bạn có chắc chắn muốn hủy đơn hàng này không?');
-
-        if (confirmCancel) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-</script>
 
 </html>
