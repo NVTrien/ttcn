@@ -15,6 +15,7 @@
     <!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Admin</title>
 </head>
 
@@ -29,7 +30,7 @@
         <div class="container mt-5">
             <div class="row d-flex">
                 <div class="tab col-md-2">
-                    <a href="" class="tablinks">Thống kê</a>
+                    <a href="" class="tablinks active">Thống kê</a>
                     <a href="manageproduct.html" class="tablinks">Quản lý sản phẩm</a>
                     <a href="categorymanagement.html" class="tablinks">Quản lý danh mục</a>
                     <a class="tablinks">Quản lý đơn hàng</a>
@@ -38,24 +39,192 @@
                     <a class="tablinks">Danh sách đơn hàng</a>
                 </div>
                 <div class="col-md-10">
-                    <div id="dashboard" class="tabcontent">
+                    <div id="dashboard" class="tabcontent box-shadow p-4 rounded bg-white">
+                        <h6 class="fw-bold">Thống Kê Chung Tháng 4</h6>
                         <div class="row dashboard_tk">
-                            <div class="col-md-4 dashboard__content">
+                            <div class="col-md-3 dashboard__content">
                                 <div><i class="fa-solid fa-cart-shopping"></i></div>
                                 <div>50</div>
                                 <div>Đơn hàng mới</div>
                             </div>
-                            <div class="col-md-4 dashboard__content">
-                                <div><i class="fa-solid fa-message"></i></div>
-                                <div>50</div>
-                                <div>Bình luận mới</div>
+                            <div class="col-md-3 dashboard__content">
+                                <div><i class="fa-solid fa-dollar-sign"></i></div>
+                                <div>1000.000.000đ</div>
+                                <div>Doanh Thu</div>
                             </div>
-                            <div class="col-md-4 dashboard__content">
+                            <div class="col-md-3 dashboard__content">
                                 <div><i class="fa-solid fa-user"></i></div>
                                 <div>50</div>
                                 <div>User mới</div>
                             </div>
+                            <div class="col-md-3 dashboard__content">
+                                <div><i class="fa-solid fa-circle-xmark"></i></div>
+                                <div>10</div>
+                                <div>Đơn hủy</div>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <div class="col-md-12 mt-4 bg-white rounded p-4 box-shadow">
+                            <h6 class="fw-bold">Thống kê doanh thu theo tháng</h6>
+                            <div id="revenue-chart">
+                                <canvas id="myChart"></canvas>
+                                <script>
+                                    // Get the canvas element
+                                    // var data = /*[[${revenueData}]]*/ []; sử dụng cho thymeleaf để lấy dữ liệu từ controller
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    // Create the chart
+                                    var myChart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+                                            datasets: [{
+                                                label: 'Doanh Thu (VNĐ)',
+                                                data: [500, 1000, 750, 1200, 900, 1500, 600, 800, 1000, 1200, 1400, 1600],
+                                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                                borderColor: 'rgba(75, 192, 192, 1)',
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            scales: {
+                                                y: {
+                                                    beginAtZero: true
+                                                }
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                <div class="bg-white p-4 rounded mt-4 box-shadow">
+                    <h6 class="fw-bold">Sản phẩm bán chạy</h6>
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Số lượng bán</th>
+                                    <th scope="col">Doanh thu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>iPhone 13 ProMax</td>
+                                    <td>100</td>
+                                    <td>1.000.000đ</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>iPhone 12 ProMax</td>
+                                    <td>90</td>
+                                    <td>900.000đ</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>SamSung Galaxy S23</td>
+                                    <td>80</td>
+                                    <td>800.000đ</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Oppo Reno 11F</td>
+                                    <td>70</td>
+                                    <td>700.000đ</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Xiaomi 14 Pro</td>
+                                    <td>60</td>
+                                    <td>600.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded mt-4 box-shadow">
+                    <h6 class="fw-bold">Sản Phẩm sắp hết hàng</h6>
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Số lượng còn lại</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>iPhone 13 ProMax</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>iPhone 12 ProMax</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>SamSung Galaxy S23</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Oppo Reno 11F</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Xiaomi 14 Pro</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded mt-4 box-shadow">
+                    <h6 class="fw-bold">Sản phẩm tồn kho</h6>
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Số lượng tồn kho</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>iPhone 13 ProMax</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>iPhone 12 ProMax</td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>SamSung Galaxy S23</td>
+                                    <td>80</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Oppo Reno 11F</td>
+                                    <td>70</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Xiaomi 14 Pro</td>
+                                    <td>60</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -65,7 +234,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>   
+    crossorigin="anonymous"></script>
 <script src="./js/admin.js"></script>
 
 </html>
